@@ -28,7 +28,7 @@ BDA (Big Data Analysis 학회) 의 학회 운영 과정 속에서 매 기수마�
 
 ## 2. 팀원 소개
 
-|<img src="image/김혜원_사진.jpeg" width="200px">|<img src="https://github.com/B2O1/BDA_Final_Assignment/issues/1" width="200px">|사진|
+|<img src="image/김혜원_사진.jpeg" width="200px">|<img src="https://github.com/user-attachments/assets/f03cd9c5-824e-41f2-868f-ee2a234e59bd" width="200px">|사진|
 |:---:|:---:|:---:|
 |김혜원|박찬우|변해민|
 
