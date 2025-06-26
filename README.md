@@ -24,11 +24,11 @@ BDA (Big Data Analysis 학회) 의 학회 운영 과정 속에서 매 기수마�
 | 항목       | 내용                                                                 |
 |------------|----------------------------------------------------------------------|
 |학회의 안정적인 운영|학회원의 적극적인 참여와 더불어 다양한 행사를 진행하고 참여율을 높임으로써 안정적인 운영을 추진할 수 있습니다|
-|학회원이 만족감 상승|학회원들의 경험의 질을 높임으로써 BDA 정규 수업 과정을 수료할 수 있습니다|
+|학회원이 만족감 상승|학회원들의 경험의 질을 높임으로써 BDA 정규 수업 과정을 수료율을 높일 수 있습니다|
 
 ## 2. 팀원 소개
 
-|<img src="image/김혜원_사진.jpeg">|<img src="image/박찬우_사진.JPG">|사진|
+|<img src="image/김혜원_사진.jpeg" width="200px">|<img src="image/박찬우_사진.JPG" width="200px">|사진|
 |:---:|:---:|:---:|
 |김혜원|박찬우|변해민|
 
@@ -50,30 +50,128 @@ BDA (Big Data Analysis 학회) 의 학회 운영 과정 속에서 매 기수마�
 ### Tech stack
 #### 사용 프로그램
 
-    | 항목            | 내용                                               |
-    |-----------------|----------------------------------------------------|
-    | Language        | Python                                             |
-    | Development     | VS Code, Google Colab, RunPod, AWS EC2            |
-    | Embedding Model | HuggingFace                                       |
-    | Vector DB       | FAISS                                              |
-    | LLM Model       | GPT-3.5, EXAONE                                    |
-    | Framework       | Django, LangChain                                  |
-    | Collaboration   | Git, GitHub, Discord                               |
+| 항목            | 내용                                               |
+|-----------------|----------------------------------------------------|
+| Language        | <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">                                             |
+| Development     | <img src="https://img.shields.io/badge/googlecolab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white">    <img src="https://img.shields.io/badge/jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white">   |
+| Collaboration   |    <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> <img src="https://img.shields.io/badge/discord-5865F2?style=for-the-badge&logo=discord&logoColor=white">                          |
 
-#### 사용한 라이브러리
+#### 사용 라이브러리
 
 | 항목            | 내용                                               |
-    |-----------------|----------------------------------------------------|
-    | Language        | Python                                             |
-    | Development     | VS Code, Google Colab, RunPod, AWS EC2            |
-    | Embedding Model | HuggingFace                                       |
-    | Vector DB       | FAISS                                              |
-    | LLM Model       | GPT-3.5, EXAONE                                    |
-    | Framework       | Django, LangChain                                  |
-    | Collaboration   | Git, GitHub, Discord                               |
+|-----------------|----------------------------------------------------|
+| <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">         | <img src="https://img.shields.io/badge/pandas-3776AB?style=for-the-badge&logo=python&logoColor=white">            <img src="https://img.shields.io/badge/numpy-3776AB?style=for-the-badge&logo=python&logoColor=white">   <img src="https://img.shields.io/badge/matplotlib-3776AB?style=for-the-badge&logo=python&logoColor=white">   <img src="https://img.shields.io/badge/seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white">  <img src="https://img.shields.io/badge/sklearn-3776AB?style=for-the-badge&logo=python&logoColor=white">   |
+
 
 ### 사용 데이터
 
+#### member
+
+※ re_registration 아래 피처들의 결측치 값들은 설문조사를 제출하지 않은 학회원
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| id | 처리된 학회원 번호 |
+| class_id | 분반 코드 |
+| major1_1 | 제 1전공 |
+| major1_2 | 제 2전공 |
+| job | 직업 |
+| re_registration | 재등록 여부 |
+| whyBDA | 학회에 들어온 이유 |
+| time_input | 투자 가능 시간 |
+| what_to_gain | 학회에서 얻고자 하는 것 |
+| desired_job | 희망 직무 |
+| desired_job_data_ability | 희망 직무 데이터 필요 역량 |
+| proficiency_sql | sql 활용 능력 |
+| proficiency_python | python 활용 능력 |
+| study_experience | 데이터 관련 스터디 참여 횟수 |
+| club_experience | 데이터 관련 동아리 참여 횟수 |
+| society_experience | 데이터 관련 학회 참여 횟수 |
+| contest_count | 공모전 참여 횟수 |
+| project_count | 프로젝트 참여 횟수 |
+
+#### point
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| id | 처리된 학회원 번호 |
+| class_id | 분반 코드 |
+| bonus | 상점 |
+| minus | 벌점 |
+| point_date | 상/벌점 부여 날짜 |
+
+#### attendance
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| id | 처리된 학회원 번호 |
+| class_id | 분반 코드 |
+| week_n | n주차 출석 여부(2: 출석, 1: 지각, 0: 결석) |
+
+#### assignment
+
+※ 결측치의 경우 결석과 동일
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| id | 처리된 학회원 번호 |
+| class_id | 분반 코드 |
+| week_n | n주차 과제 제출 여부(2: 제출, 1: 지각 제출: 0: 미제출) |
+
+#### class
+
+| 속성명 |
+| --- |
+| class_id |
+| class_name |
+| class_lang |
+
+#### group_activity
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| id | 처리된 학회원 번호 |
+| class_id | 분반 코드 |
+| group_master | 조장 여부 |
+| on_offline | 온/오프라인 |
+| group_leave | 조별활동 이탈 여부 |
+
+#### event_participation
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| id | 처리된 학회원 번호 |
+| class_id | 분반 코드 |
+| event_name | 참여한 행사 이름 |
+| event_date | 행사 날짜 |
+
+#### satisfaction_survey
+
+※ 행사, 조별활동, 카페 점수 피처의 결측치는 학회원이 참여 하지 않아서 점수 부여를 하지 않은 값들
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| survey_month | 설문조사 월 |
+| class_id | 분반 코드 |
+| id | 처리된 학회원 번호 |
+| class_recommendation | 분반 추천 점수 |
+| operating | 학회 운영 점수 |
+| bda_wave | wave 행사 점수 |
+| bda_study | study 행사 점수 |
+| bda_job | job 행사 점수 |
+| bda_bootcamp | bootcamp 행사 점수 |
+| overall_bda | 전반적인 학회 점수 |
+| group_project | 조별활동 점수 |
+| cafe_recommendation | 네이버 카페 추천 점수 |
+
+#### report_participation
+
+| 속성명 | 속성 설명 |
+| --- | --- |
+| id | 처리된 학회원 번호 |
+| class_id | 분반 코드 |
+| report | 참여한 설문 조사 이름 |
+| report_date | 설문조사 날짜 |
 
 ---
 ## 5. 프로젝트 내용
